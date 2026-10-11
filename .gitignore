@@ -1,0 +1,46 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+/auth.json
+
+# PHP / Laravel dependencies and generated files
+# NOTE: public/build/ (compiled Vite assets) is intentionally NOT ignored so the app
+# can be deployed to PHP-only hosts. Regenerate it with `npm run build` after UI changes.
+/vendor/
+/node_modules/
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+/storage/app/private/*
+!/storage/app/private/.gitignore
+/storage/app/public/*
+!/storage/app/public/.gitignore
+/database/*.sqlite
+/database/*.sqlite-*
+
+# Test / IDE / OS
+.phpunit.result.cache
+/.phpunit.cache
+.phpactor.json
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+.DS_Store
+Thumbs.db
+Homestead.json
+Homestead.yaml
+*.log
