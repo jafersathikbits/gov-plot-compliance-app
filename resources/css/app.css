@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body { @apply bg-slate-50 text-slate-900 antialiased; }
+    [x-cloak] { display: none !important; }
+    /* @csrf renders a hidden input first; don't let space-y-* push the first visible field down. */
+    [class*="space-y-"] > input[type="hidden"]:first-child + * { margin-top: 0; }
+}
+
+@layer components {
+    /* Buttons */
+    .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium shadow-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50; }
+    .btn-primary { @apply btn bg-brand-700 text-white hover:bg-brand-800 focus-visible:ring-brand-500; }
+    .btn-secondary { @apply btn border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 focus-visible:ring-brand-500; }
+    .btn-success { @apply btn bg-emerald-600 text-white hover:bg-emerald-700 focus-visible:ring-emerald-500; }
+    .btn-warning { @apply btn bg-amber-500 text-white hover:bg-amber-600 focus-visible:ring-amber-400; }
+    .btn-danger { @apply btn bg-rose-600 text-white hover:bg-rose-700 focus-visible:ring-rose-500; }
+    .btn-sm { @apply px-3 py-1.5 text-xs; }
+
+    /* Cards */
+    .card { @apply rounded-xl border border-slate-200 bg-white shadow-sm; }
+    .card-body { @apply p-5 sm:p-6; }
+    .card-header { @apply flex items-center justify-between gap-3 border-b border-slate-100 px-5 py-4 sm:px-6; }
+    .card-title { @apply text-base font-semibold text-slate-900; }
+
+    /* Forms */
+    .form-label { @apply mb-1 block text-sm font-medium text-slate-700; }
+    .form-input { @apply block w-full rounded-lg border-slate-300 text-sm shadow-sm focus:border-brand-500 focus:ring-brand-500; }
+    .form-hint { @apply mt-1 text-xs text-slate-500; }
+    .form-section { @apply text-sm font-semibold uppercase tracking-wide text-brand-800; }
+
+    /* Tables */
+    .table { @apply min-w-full divide-y divide-slate-200 text-sm; }
+    .table thead th { @apply bg-slate-50 px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-500; }
+    .table tbody tr { @apply hover:bg-slate-50/70; }
+    .table tbody td { @apply px-4 py-3 align-middle text-slate-700; }
+    .table tbody { @apply divide-y divide-slate-100; }
+
+    /* Misc */
+    .link { @apply font-medium text-brand-700 hover:text-brand-900 hover:underline; }
+    .page-title { @apply text-2xl font-bold tracking-tight text-slate-900; }
+    .page-subtitle { @apply mt-1 text-sm text-slate-500; }
+    .badge { @apply inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-medium ring-1 ring-inset; }
+    .dl-item dt { @apply text-xs font-medium uppercase tracking-wide text-slate-500; }
+    .dl-item dd { @apply mt-1 text-sm font-medium text-slate-900; }
+    .tab { @apply rounded-lg px-3 py-1.5 text-sm font-medium text-slate-600 hover:bg-white hover:text-slate-900; }
+    .tab-active { @apply bg-white text-slate-900 shadow-sm; }
+}
