@@ -297,4 +297,5 @@ Back up SQLite and MongoDB separately. Do not run the demo seeder unchanged in p
 
 ## License
 
-A standalone `LICENSE` file has not yet been added. The project’s `composer.json` currently declares MIT, but repository-level licensing should be finalized before redistribution. A license file will be added when licensing is finalized across the project repositories.
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
